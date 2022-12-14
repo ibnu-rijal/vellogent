@@ -459,9 +459,35 @@ input[type=radio]:checked~.option {
 }
 
 .footer {
-    background-color: var(--pudar);
-    color: var(--tua);
-    height: auto;
-    width: 100%;
-    padding-bottom: 20px;
+	background-color: var(--pudar);
+	color: var(--tua);
+	height: auto;
+	width: 100%;
+	padding-bottom: 20px;
+}
+
+.footer button {
+	margin: auto;
+	display: block;
+	background-color: var(--muda);
+	transition: .6s;
+	border: none;
+	border-radius: 10px;
+	height: auto;
+	outline: 3px solid var(--tua);
+	box-shadow: 5px 3px 7px var(--muda);
+	text-decoration: none;
+	padding: 7px 15px;
+}
+
+.footer button a {
+	color: var(--tua);
+	padding: 0px 15px;
+	font-weight: bold;
+	font-size: 1.1rem;
+	text-shadow: 2px 2px 1px var(--pudar);
+}
+
+.footer button:hover {
+	transform: scale(1.2, 1.2);
 }
