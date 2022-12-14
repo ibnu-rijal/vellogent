@@ -258,6 +258,7 @@ nav {
 
 .typing {
 	padding: 10px 1px 30px 37%;
+	text-align: center;
 }
 
 @keyframes typing {
