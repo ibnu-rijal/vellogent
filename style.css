@@ -323,17 +323,23 @@ nav {
 	}
 }
 
-@media only screen and (max-width: 490px) {
+@media only screen and (max-width: 280px) {
+	body {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 280px) and (max-width: 490px) {
 	.loader {
 		display: none;
 	}
 
 	nav {
-		font-size: .9rem;
+		font-size: .7rem;
 	}
 
 	.menu a {
-		padding: 10px 2px;
+		padding: 10px .1px;
 	}
 
 	.submenu {
@@ -389,16 +395,19 @@ nav {
 	}
 
 	.typing {
-		padding: 10px 30px 10px 45px;
+		padding: 10px 0px;
+		margin: auto;
 	}
 
 	.footer .typing p {
 		margin: 0;
-		font-size: 11px;
-		animation: ketik 20s steps(48) infinite alternate, dash 0.7s infinite;
+		font-size: 8px;
+		border: none;
+		animation: none;
+		/* animation: ketik 20s steps(48) infinite alternate, dash 0.7s infinite; */
 	}
 
-	@keyframes ketik {
+	/* @keyframes ketik {
 		0% {
 			width: 0%;
 			visibility: hidden;
@@ -417,7 +426,7 @@ nav {
 		100% {
 			border-color: black;
 		}
-	}
+	} */
 }
 
 @media only screen and (min-width: 490px) and (max-width: 600px) {
