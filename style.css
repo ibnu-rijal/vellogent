@@ -17,10 +17,8 @@
 	text-decoration: none;
 	list-style: none;
 	font-family: monospace;
-}
-
-body {
-	background-color: var(--pudar);
+	-moz-user-select: none;
+	user-select: none;
 }
 
 .loader {
@@ -41,7 +39,7 @@ body {
 }
 
 .disppear {
-	animation: vanish 3.521s 1 forwards;
+	animation: vanish 3.5s 1 forwards;
 }
 
 @keyframes vanish {
@@ -74,22 +72,26 @@ body {
 header {
 	background-color: var(--muda);
 	filter: drop-shadow(0 2px 20px var(--tua));
-	animation: nav 3.52s 1 ease;
 }
 
-@keyframes nav {
+/* .tampil {
+	animation: lihat 3.6s 1 forwards;
+}
+
+@keyframes lihat {
 	0% {
-		visibility: hidden;
+		opacity: 0;
 	}
 
-	92% {
-		visibility: hidden;
+	96% {
+		opacity: 0;
 	}
 
 	100% {
+		opacity: 1;
 		visibility: visible;
 	}
-}
+} */
 
 nav {
 	max-width: 1100px;
@@ -287,7 +289,6 @@ nav {
 	font-size: 12px;
 	text-align: center;
 	margin: 0 10px 0 0;
-
 	font-weight: bold;
 	overflow: hidden;
 	white-space: nowrap;
@@ -320,4 +321,407 @@ nav {
 	100% {
 		border-color: black;
 	}
+}
+
+@media only screen and (max-width: 490px) {
+	.loader {
+		display: none;
+	}
+
+	nav {
+		font-size: .9rem;
+	}
+
+	.menu a {
+		padding: 10px 2px;
+	}
+
+	.submenu {
+		width: auto;
+		font-size: .73rem;
+	}
+
+	.submenu a {
+		padding: 10px 1.4rem
+	}
+
+	.submenu2 {
+		width: auto;
+		font-size: .6rem;
+	}
+
+	.submenu2 a {
+		padding: 10px 1rem;
+	}
+
+	.main h1 {
+		font-size: 30px;
+	}
+
+	.main h1:hover {
+		animation: ucap 8s infinite cubic-bezier(0.69, 0.05, 1, 1);
+	}
+
+	@keyframes ucap {
+		0% {
+			font-size: 30px;
+			transform: rotateY(0deg);
+		}
+
+		25% {
+			font-size: 35px;
+		}
+
+		75% {
+			font-size: 20px;
+			transform: rotateY(-45deg);
+		}
+
+		100% {
+			font-size: 30px;
+			transform: rotateY(0deg);
+		}
+	}
+
+	.main img {
+		height: 230px;
+		width: 230px;
+	}
+
+	.typing {
+		padding: 10px 30px 10px 45px;
+	}
+
+	.footer .typing p {
+		margin: 0;
+		font-size: 11px;
+		animation: ketik 20s steps(48) infinite alternate, dash 0.7s infinite;
+	}
+
+	@keyframes ketik {
+		0% {
+			width: 0%;
+			visibility: hidden;
+		}
+
+		100% {
+			width: 100%;
+		}
+	}
+
+	@keyframes dash {
+		50% {
+			border-color: transparent;
+		}
+
+		100% {
+			border-color: black;
+		}
+	}
+}
+
+@media only screen and (min-width: 490px) and (max-width: 600px) {
+	.loader {
+		display: none;
+	}
+
+	nav {
+		font-size: .9rem;
+	}
+
+	.menu a {
+		padding: 10px 1rem;
+	}
+
+	.submenu {
+		width: auto;
+		font-size: .73rem;
+	}
+
+	.submenu a {
+		padding: 15px 2.27rem
+	}
+
+	.submenu2 {
+		width: auto;
+		font-size: .73rem;
+	}
+
+	.submenu2 a {
+		padding: 15px 1rem;
+	}
+
+	.main h1 {
+		font-size: 3.5rem;
+	}
+
+	.main h1:hover {
+		animation: bilang 8s infinite cubic-bezier(0.69, 0.05, 1, 1);
+	}
+
+	@keyframes bilang {
+		0% {
+			font-size: 3.5rem;
+			transform: rotateY(0deg);
+		}
+
+		25% {
+			font-size: 4rem;
+		}
+
+		75% {
+			font-size: 3.2rem;
+			transform: rotateY(-45deg);
+		}
+
+		100% {
+			font-size: 3.5rem;
+			transform: rotateY(0deg);
+		}
+	}
+
+	.main img {
+		height: 230px;
+		width: 230px;
+	}
+
+	.typing {
+		padding: 10px 30px;
+		text-align: center;
+	}
+
+	.footer .typing p {
+		margin: auto;
+		font-size: 1rem;
+		animation: none;
+		border: none;
+		/* animation: ketik 20s steps(48) infinite alternate, dash 0.7s infinite; */
+	}
+
+	/* @keyframes ketik {
+		0% {
+			width: 0%;
+			visibility: hidden;
+		}
+
+		100% {
+			width: 100%;
+		}
+	}
+
+	@keyframes dash {
+		50% {
+			border-color: transparent;
+		}
+
+		100% {
+			border-color: black;
+		}
+	} */
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+	.loader {
+		display: none;
+	}
+
+	nav {
+		font-size: 1.2rem;
+	}
+
+	.menu a {
+		padding: 10px 1rem;
+	}
+
+	.submenu {
+		width: auto;
+		font-size: 1rem;
+	}
+
+	.submenu a {
+		padding: 20px 2.52rem
+	}
+
+	.submenu2 {
+		width: auto;
+		font-size: .8rem;
+	}
+
+	.submenu2 a {
+		padding: 15px 2.12rem;
+	}
+
+	.main h1 {
+		font-size: 4rem;
+	}
+
+	.main h1:hover {
+		animation: oke 8s infinite cubic-bezier(0.69, 0.05, 1, 1);
+	}
+
+	@keyframes oke {
+		0% {
+			font-size: 4rem;
+			transform: rotateY(0deg);
+		}
+
+		25% {
+			font-size: 4.5rem;
+		}
+
+		75% {
+			font-size: 3.9rem;
+			transform: rotateY(-45deg);
+		}
+
+		100% {
+			font-size: 4rem;
+			transform: rotateY(0deg);
+		}
+	}
+
+	.main img {
+		height: 230px;
+		width: 230px;
+	}
+
+	.typing {
+		padding: 10px 20vw;
+	}
+
+	.footer .typing p {
+		margin: 0;
+		font-size: 13px;
+		animation: none;
+		border: none;
+		/* animation: ketik 5s steps(48) infinite alternate, dash 0.7s infinite; */
+	}
+
+	/* @keyframes ketik {
+		0% {
+			width: 0%;
+			visibility: hidden;
+		}
+
+		100% {
+			width: 100%;
+		}
+	}
+
+	@keyframes dash {
+		50% {
+			border-color: transparent;
+		}
+
+		100% {
+			border-color: black;
+		}
+	} */
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	.loader {
+		display: none;
+	}
+
+	nav {
+		font-size: 1.5rem;
+	}
+
+	.menu a {
+		padding: 10px 1rem;
+	}
+
+	.submenu {
+		width: auto;
+		font-size: 1.2rem;
+	}
+
+	.submenu a {
+		padding: 20px 2.9rem
+	}
+
+	.submenu2 {
+		width: auto;
+		font-size: 1rem;
+	}
+
+	.submenu2 a {
+		padding: 12px 2.12rem;
+	}
+
+	.main h1 {
+		font-size: 5.2rem;
+	}
+
+	.main h1:hover {
+		animation: oke 8s infinite cubic-bezier(0.69, 0.05, 1, 1);
+	}
+
+	@keyframes oke {
+		0% {
+			font-size: 5.2rem;
+			transform: rotateY(0deg);
+		}
+
+		25% {
+			font-size: 5.5rem;
+		}
+
+		75% {
+			font-size: 5.1rem;
+			transform: rotateY(-45deg);
+		}
+
+		100% {
+			font-size: 5.2rem;
+			transform: rotateY(0deg);
+		}
+	}
+
+	.main div {
+		height: 290px;
+		width: 290px;
+		/* align-content: center; */
+		/* display: block; */
+		/* margin: 0 auto; */
+	}
+
+	.main img {
+		height: 290px;
+		width: 290px;
+	}
+
+	.typing {
+		padding: 10px 20vw 50px 20vw;
+	}
+
+	.footer .typing p {
+		margin: 0;
+		font-size: 13px;
+		animation: none;
+		border: none;
+		/* animation: ketik 5s steps(48) infinite alternate, dash 0.7s infinite; */
+	}
+
+	/* @keyframes ketik {
+			0% {
+				width: 0%;
+				visibility: hidden;
+			}
+	
+			100% {
+				width: 100%;
+			}
+		}
+	
+		@keyframes dash {
+			50% {
+				border-color: transparent;
+			}
+	
+			100% {
+				border-color: black;
+			}
+		} */
 }
