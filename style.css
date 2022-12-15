@@ -74,7 +74,7 @@ header {
 	filter: drop-shadow(0 2px 20px var(--tua));
 }
 
-/* .tampil {
+.tampil {
 	animation: lihat 3.6s 1 forwards;
 }
 
@@ -91,7 +91,7 @@ header {
 		opacity: 1;
 		visibility: visible;
 	}
-} */
+}
 
 nav {
 	max-width: 1100px;
